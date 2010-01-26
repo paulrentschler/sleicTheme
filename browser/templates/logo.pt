@@ -3,21 +3,37 @@
 </a>
 
 <div id="logos">
-  <div id="section-logo"
-       tal:define="sectionLogo context/findSectionLogo">
 
-	  <img src="" alt="" width="470" height="150"
-	       tal:attributes="src sectionLogo" />
-	</div>
+	<tal:comment tal:replace="nothing">
+	  <div id="portal-logo">
+		  <h1>SLEIC</h1>
+		  <div>
+		    <span class="logo-accent">S</span>ocial, 
+		    <span class="logo-accent">L</span>ife, and 
+		    <span class="logo-accent">E</span>ngineering science 
+		    <span class="logo-accent">I</span>maging 
+		    <span class="logo-accent">C</span>enter
+		  </div>
+		</div>
+	</tal:comment>
 
 	<a metal:define-macro="portal_logo"
 	   id="portal-logo"
 		 accesskey="1"
 		 tal:attributes="href context/portal_url"
 		 i18n:domain="plone">
-		<img src="huck-logo.jpg" alt=""
-				 tal:replace="structure context/huck-logo.jpg" />
+		<img src="sleic-logo.jpg" alt=""
+				 tal:replace="structure context/sleic-logo.jpg" />
 	</a>
 </div>
 
 <div id="visualClear"><!--  --></div>
+
+<tal:comment tal:replace="nothing">
+	<div id="section-logo"
+	     tal:define="sectionLogo context/findSectionLogo">
+	
+	  <img src="" alt="" width="470" height="150"
+	       tal:attributes="src sectionLogo" />
+	</div>
+</tal:comment>

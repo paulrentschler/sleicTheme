@@ -5,7 +5,7 @@
 		<span i18n:name="current_year" 
 				   tal:define="now modules/DateTime/DateTime" 
 				   tal:content="now/year" />
-		The Huck Institutes of the Life Sciences at <a href="http://www.psu.edu/" title="Penn State home page">Penn State</a>.
+		Social, Life, and Engineering sciences Imaging Center.
 		All Rights Reserved.
 		</span>
 	</p>
@@ -41,9 +41,4 @@
             Section 508 compliant
     </a>
 	</p>
- </div>
-
- <div id="partnerLogo">
-   <a href="http://weblion.psu.edu">
-     <img tal:replace="structure context/weblion-partner-logo.png" /></a>
  </div>

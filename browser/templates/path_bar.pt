@@ -1,19 +1,12 @@
 <tal:comment tal:replace="nothing">
-  Created by: Catherine Williams / Paul Rentschler
+  Created by: Paul Rentschler
   Description: used to display the location breadcrumbs.
   Based on: path_bar.pt
   Changes:
     - hardcoded the starting link as "PSU"
-    - made the "home" crumb say "Huck Institutes"
+    - made the "home" crumb say "SLEIC"
 </tal:comment>
 
-
-<tal:comment tal:replace="nothing">
-Modified by Catherine Williams
-Only show the path bar for pages other than home and the pages generated off a template (e.g. search results, contact-info, accessibility-info, sitemap etc)
-
-               tal:condition="python:len(whatsHere)>0">
-</tal:comment>
 
 <tal:block tal:define="whatsHere view/breadcrumbs">
 
@@ -27,7 +20,7 @@ Only show the path bar for pages other than home and the pages generated off a t
 			<tal:rtl condition="view/is_rtl">&raquo;</tal:rtl>
 		</span>
 		<tal:homepage tal:condition="python: not len(whatsHere) > 0">
-			<span class="crumbHome">Huck Institutes</span>
+			<span class="crumbHome">SLEIC</span>
 		</tal:homepage>
 		<tal:notHomepage tal:condition="python: len(whatsHere) > 0">
 			<a i18n:translate="tabs_home" class="crumbHome" tal:attributes="href view/navigation_root_url">

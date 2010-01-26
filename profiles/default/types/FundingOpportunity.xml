@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<object name="Protocol"
+<object name="News Item"
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <property name="title" i18n:translate="">Protocol, research highlight or lab</property>
+ <property name="title" i18n:translate="">Funding Opportunity</property>
  <property name="description"
-     i18n:translate="">Based on the news item content type.</property>
- <property name="content_icon"></property>
+     i18n:translate="">An announcement of a funding opportunity.</property>
+ <property name="content_icon">newsitem_icon.gif</property>
  <property name="content_meta_type">ATNewsItem</property>
  <property name="product">ATContentTypes</property>
  <property name="factory">addATNewsItem</property>

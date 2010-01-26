@@ -1,25 +1,24 @@
 Description
 
-    HuckTheme is a product that adds a new style to a Plone 3.x site.
+    sleicTheme is a product that adds a new style to a Plone 3.x site.
 
-    HuckTheme is based on DIYPloneStyle 3.0, a skeleton product
-    ready for building new graphical designs for Plone.
+    sleicTheme is based on the HuckStyle product.
 
 Installation
 
-    On the file system: place HuckTheme in the Products directory
+    On the file system: place sleicTheme in the Products directory
     of your Zope instance and restart the server.
 
     In the Plone Web Interface: as portal manager, go to 'Portal > Site Setup
     > Add-on Products'.
-    Select 'HuckTheme' and click the *Install* button.
+    Select 'sleicTheme' and click the *Install* button.
 
     Uninstall -- Can be done from the same page.
 
 Selecting a skin
 
     Depending on the values given in the skins tool profile (see
-    profiles/default/skins.xml), the HuckTheme skin will be selected (or
+    profiles/default/skins.xml), the sleicTheme skin will be selected (or
     not) as default one while installing the product. If you need to switch
     from a default skin to another, go to the 'Site Setup' page, and choose
     'Themes' (as portal manager).

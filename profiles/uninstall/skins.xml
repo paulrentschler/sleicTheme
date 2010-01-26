@@ -3,10 +3,10 @@
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
         default_skin="Plone Default" request_varname="plone_skin">
 
-	<object name="HuckTheme"
+	<object name="sleicTheme"
 		meta_type="Filesystem Directory View"
 		remove="True"/>
 	
-	<skin-path name="HuckTheme" remove="True" />
+	<skin-path name="sleicTheme" remove="True" />
 
 </object>

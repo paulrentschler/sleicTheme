@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
-<!-- Setup configuration of the viewlet managers for the "HuckTheme" skin -->
+<!-- Setup configuration of the viewlet managers for the "sleicTheme" skin -->
 
 <object>
 <!-- hide Plone's defaults -->
- <hidden manager="plone.portaltop" skinname="HuckTheme">
+ <hidden manager="plone.portaltop" skinname="sleicTheme">
     <viewlet name="plone.path_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
  </hidden>
 
- <hidden manager="plone.portalheader" skinname="HuckTheme">
+ <hidden manager="plone.portalheader" skinname="sleicTheme">
     <viewlet name="plone.logo" />
     <viewlet name="plone.site_actions" />
     <viewlet name="plone.searchbox" />
   </hidden>
   
-  <hidden manager="plone.portalfooter" skinname="HuckTheme">
+  <hidden manager="plone.portalfooter" skinname="sleicTheme">
      <viewlet name="plone.footer" />
      <viewlet name="plone.colophon" />
   </hidden>
 
 <!-- insert our own, and make sure everything is in the order we want -->
-	<order manager="plone.portaltop" skinname="HuckTheme">
+	<order manager="plone.portaltop" skinname="sleicTheme">
 		<viewlet name="plone.header" />
 		<viewlet name="plone.personal_bar" />
-		<viewlet name="HuckTheme.path_bar" />
+		<viewlet name="sleicTheme.path_bar" />
 	</order>
 
-	<order manager="plone.portalheader" skinname="HuckTheme">
-		<viewlet name="HuckTheme.logo" />
-		<viewlet name="HuckTheme.searchbox" insert-before="HuckTheme.logo" />
+	<order manager="plone.portalheader" skinname="sleicTheme">
+		<viewlet name="sleicTheme.logo" />
+		<viewlet name="sleicTheme.searchbox" insert-before="sleicTheme.logo" />
 	</order>
 
-	<order manager="plone.portalfooter" skinname="HuckTheme">
-		<viewlet name="HuckTheme.footer" insert-before="plone.analytics"/>
-		<viewlet name="HuckTheme.site_actions" insert-before="HuckTheme.footer" />
+	<order manager="plone.portalfooter" skinname="sleicTheme">
+		<viewlet name="sleicTheme.footer" insert-before="plone.analytics"/>
+		<viewlet name="sleicTheme.site_actions" insert-before="sleicTheme.footer" />
 	</order>
 	   
 </object>

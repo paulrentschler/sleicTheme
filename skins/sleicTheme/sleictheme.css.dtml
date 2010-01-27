@@ -443,6 +443,7 @@ ul.list {
 	list-style-image: none;
 }
 
+/*
 .documentActions {
   margin-top: 3em;
 }
@@ -475,7 +476,7 @@ ul.list {
 #documentEditable #content a.link-parent {
   background-color: #EAEAEA;
 }
-
+*/
 
 
 
@@ -555,7 +556,7 @@ table.gradProgs tbody tr td {
 }
 
 .portlet {
-	border: 2px solid #336699;
+	border: 2px solid #0000CC;
 	font-size: 100%;
 }
 
@@ -566,7 +567,7 @@ table.gradProgs tbody tr td {
 }
 
 .portletHeader {
-	background-color: &dtml-colorZero;;
+	background-color: #0000CC;
 	border: none;
 	color: #fff;
 	padding: 0.25em 1em;
@@ -638,6 +639,7 @@ dd.portletItem .navTreeCurrentItem {
 
 /* ----- CONTENT WELL PORTLETS ----- */
 
+/*
 .portletsBelowContentA {
   float: left;
   width: 55%;
@@ -649,69 +651,68 @@ dd.portletItem .navTreeCurrentItem {
   padding: 0.2em 0.2em 0.2em 1em;
   width: 40%;
 }
-
+*/
 
 
 
 /* ---- CONTENT WELL PORTLETS (HOME PAGE) ---- */
 
-.section-welcome .portletsAboveContentA { width: 99%; }
-.section-welcome .portletsAboveContentB { width: 48%; }
-.section-welcome .portletsAboveContentC { width: 48%; }
+.section-welcome .portletsBelowContentA,
+.section-welcome .portletsBelowContentB,
+.section-welcome .portletsBelowContentC {
+  float: left;
+  padding: 0.5em;
+  width: 31.75%;
+}
 
-.section-welcome .portletsAboveContentA .portlet,
-.section-welcome .portletsAboveContentB .portlet,
-.section-welcome .portletsAboveContentC .portlet {
+.section-welcome .portletsBelowContentA .portlet,
+.section-welcome .portletsBelowContentB .portlet,
+.section-welcome .portletsBelowContentC .portlet {
   border: 0 none;
 }
 
-.section-welcome .portletsAboveContentA {
-  padding: 0.5em;
-}
-
-.section-welcome .portletsAboveContentB,
-.section-welcome .portletsAboveContentC {
-  float: left;
-  padding: 0.5em;
-}
-
-.section-welcome #portlets-above .portlet dt.portletHeader {
-  background-color: transparent;
-  color: #FF6633;
-	font-size: 170%;
+.section-welcome #portlets-below .portlet dt.portletHeader {
+  color: black;
+	font-size: 100%;
 	font-weight: bold;
-  padding: 0.25em 0.25em;
+	height: 30px;
+  padding: 0.25em 0.25em 0.25em 50px;
 }
 
-.section-welcome #portlets-above .portlet dt.portletHeader a,
-.section-welcome #portlets-above .portlet dt.portletHeader a:link,
-.section-welcome #portlets-above .portlet dt.portletHeader a:active,
-.section-welcome #portlets-above .portlet dt.portletHeader a:visited {
-  background-color: transparent;
-  color: #FF6633;
-	text-decoration: none;
-}
-
-.section-welcome #portlets-above .portlet dt.portletHeader a:hover {
-  color: #0099FF;
-  text-decoration: underline;
-}
-
-.section-welcome .portletsAboveContentA dt,
-.section-welcome .portletsAboveContentA dd {
+.section-welcome #portlets-below .portlet dd {
   background-color: #EAEAEA;
+  height: 300px;
 }
 
-.section-welcome #portlets-above .portlet dd.portletItem {
-  min-height: 70px;
+.section-welcome .portletsBelowContentA .portlet dt.portletHeader {
+  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat;
+}
+
+.section-welcome .portletsBelowContentB .portlet dt.portletHeader {
+  background: #669966 url('hef-portlet.jpg') top left no-repeat;
+}
+
+.section-welcome .portletsBelowContentC .portlet dt.portletHeader {
+  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat;
+}
+
+
+.section-welcome #portlets-below .portlet dt.portletHeader a,
+.section-welcome #portlets-below .portlet dt.portletHeader a:link,
+.section-welcome #portlets-below .portlet dt.portletHeader a:active,
+.section-welcome #portlets-below .portlet dt.portletHeader a:visited {
+  background-color: transparent;
+  color: black;
+	text-decoration: underline;
+}
+
+.section-welcome #portlets-below .portlet dt.portletHeader a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 .section-welcome #portal-column-two {
   width: 170px;
-}
-
-.section-welcome #portal-column-two div.portletStaticText {
-  margin-bottom: 1.5em;
 }
 
 

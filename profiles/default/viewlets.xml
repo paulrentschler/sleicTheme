@@ -3,15 +3,19 @@
 
 <object>
 <!-- hide Plone's defaults -->
- <hidden manager="plone.portaltop" skinname="sleicTheme">
+  <hidden manager="plone.portaltop" skinname="sleicTheme">
     <viewlet name="plone.path_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
- </hidden>
+  </hidden>
 
- <hidden manager="plone.portalheader" skinname="sleicTheme">
+  <hidden manager="plone.portalheader" skinname="sleicTheme">
     <viewlet name="plone.logo" />
     <viewlet name="plone.site_actions" />
     <viewlet name="plone.searchbox" />
+  </hidden>
+  
+  <hidden manager="plone.belowcontentbody" skinname="sleicTheme">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
   </hidden>
   
   <hidden manager="plone.portalfooter" skinname="sleicTheme">

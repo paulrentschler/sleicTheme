@@ -23,6 +23,7 @@
 	<order manager="plone.portaltop" skinname="sleicTheme">
 		<viewlet name="plone.header" />
 		<viewlet name="plone.personal_bar" />
+    <viewlet name="sleicTheme.facility_banner" insert-after="plone.personal_bar" />
 		<viewlet name="sleicTheme.path_bar" />
 	</order>
 

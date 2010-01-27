@@ -28,12 +28,3 @@
 </div>
 
 <div id="visualClear"><!--  --></div>
-
-<tal:comment tal:replace="nothing">
-	<div id="section-logo"
-	     tal:define="sectionLogo context/findSectionLogo">
-	
-	  <img src="" alt="" width="470" height="150"
-	       tal:attributes="src sectionLogo" />
-	</div>
-</tal:comment>

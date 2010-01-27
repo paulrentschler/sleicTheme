@@ -268,6 +268,34 @@ img.no-photo {
 
 
 
+/* ---- FACILITY BANNERS ---- */
+#facility_banner {
+  border-bottom: 1px solid #0000CC;
+  height: 60px;
+  margin-top: -30px;
+}
+
+#facility_banner h1 {
+  color: black;
+  font-size: 40px;
+  margin-left: 120px;
+}
+
+#facility_banner.high-field {
+  background: #FFFF66 url('high-field-banner.jpg') top left no-repeat;
+}
+
+#facility_banner.hef {
+  background: #669966 url('hef-banner.jpg') top left no-repeat;
+}
+
+#facility_banner.threet-mri {
+  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat;
+}
+
+
+
+
 /* ---- GENERAL CONTENT ---- */
 
 .contactInfo {
@@ -823,7 +851,7 @@ table.eventTable td .eventCanceled {
 /* ---- FOOTER ---- */
 
 #portal-footer {
-  background-color: black;
+  background-color: #0000CC;
 	border: none;
 	color: #AAA;
 	float: none;
@@ -863,7 +891,7 @@ table.eventTable td .eventCanceled {
 #portal-footer a,
 #portal-footer a:link,
 #portal-footer a:visited {
-	background-color: black;
+	background-color: #0000CC;
 	border: none;
 	color: #AAA;
 	text-decoration: underline;
@@ -875,7 +903,7 @@ table.eventTable td .eventCanceled {
 }
 
 #portal-siteactions {
-  background-color: black;
+  background-color: #0000CC;
   border: none;
   color: #AAA;
   margin: 0;
@@ -891,7 +919,7 @@ table.eventTable td .eventCanceled {
 #portal-siteactions li a,
 #portal-siteactions li a:link,
 #portal-siteactions li a:visited {
-	background-color: black;
+	background-color: #0000CC;
 	border: none;
 	color: #AAA;
 	text-decoration: underline;

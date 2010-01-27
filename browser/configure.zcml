@@ -17,6 +17,15 @@
         name="sleicTheme"
         />
 <!-- VIEWLETS --> 
+	<!-- The customized facilty banner -->
+    <browser:viewlet
+        name="sleicTheme.facility_banner"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.FacilityBannerViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+        
 	<!-- The customized logo -->
     <browser:viewlet
         name="sleicTheme.logo"

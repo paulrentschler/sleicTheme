@@ -1,0 +1,12 @@
+<tal:banner tal:define="facilityId context/findFacilityBanner"
+            tal:condition="python: not facilityId == 'none'">
+
+	<div id="facility_banner"
+	     tal:attributes="class facilityId">
+		               
+	  <h1 tal:condition="python: facilityId == 'high-field'">High Field MRI Facility</h1>
+	  <h1 tal:condition="python: facilityId == 'hef'">Human Electrophysiology Facility</h1>
+	  <h1 tal:condition="python: facilityId == 'threet-mri'">3T MRI Facility</h1>
+	</div>
+	
+</tal:banner>

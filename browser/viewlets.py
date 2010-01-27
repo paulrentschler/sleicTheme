@@ -12,6 +12,9 @@ class LogoViewlet(ViewletBase):
 
         self.navigation_root_url = portal_state.navigation_root_url()
 
+class FacilityBannerViewlet(ViewletBase):
+    render = ViewPageTemplateFile('templates/facility_banner.pt')
+
 class FooterViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/footer.pt')
 

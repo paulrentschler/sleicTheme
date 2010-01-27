@@ -24,7 +24,7 @@
 		</tal:homepage>
 		<tal:notHomepage tal:condition="python: len(whatsHere) > 0">
 			<a i18n:translate="tabs_home" class="crumbHome" tal:attributes="href view/navigation_root_url">
-			  Huck Institutes</a>
+			  SLEIC</a>
 	  </tal:notHomepage>
 		<span tal:condition="view/breadcrumbs" class="breadcrumbSeparator earlySeparator">
 			<tal:ltr condition="not: view/is_rtl">&rarr;</tal:ltr>

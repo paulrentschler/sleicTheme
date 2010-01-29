@@ -93,10 +93,8 @@ img.no-photo {
 }
 
 #logos {
-  left: 130px;
-  margin-bottom: -30px;
-  position: relative;
-  top: -30px;
+  margin-left: 130px;
+  margin-top: -30px;
 }
 
 #logos #portal-logo h1 {
@@ -272,13 +270,13 @@ img.no-photo {
 #facility_banner {
   border-bottom: 1px solid #0000CC;
   height: 60px;
-  margin-top: -30px;
 }
 
 #facility_banner h1 {
   color: black;
   font-size: 40px;
   margin-left: 120px;
+  margin-top: 0;
 }
 
 #facility_banner.high-field {

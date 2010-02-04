@@ -221,7 +221,7 @@ img.no-photo {
 }
 
 #facility_banner.hef {
-  background: #669966; url('hef-banner.jpg') top left no-repeat;
+  background: #669966 url('hef-banner.jpg') top left no-repeat;
 }
 
 #facility_banner.threet-mri {

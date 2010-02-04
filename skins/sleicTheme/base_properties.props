@@ -9,20 +9,59 @@ fontBaseSize:string=69%
 fontColor:string=#333333
 fontSmallSize:string=85%
 
-backgroundColor:string=White
+backgroundColor:string=white
+headerFooterBackgroundColor:string=#0000CC
+
+headerLinkColor:string=#AAA
+headerLinkActiveColor:string=#AAA
+headerLinkVisitedColor:string=#AAA
+
+globalBorderColor:string=#DEE7EC
+globalBackgroundColor:string=white
+globalBackgroundColorNonSelected:string=#0000AA
+globalFontColor:string=#0000AA
+globalFontColorNonSelected:string=white;
+
+breadcrumbsBackgroundColor:string=white
+breadcrumbsFontColor:string=#666
+breadcrumbsLinkColor:string=#336699
+
+personalBarFontColor:string=white
+personalBarLinkColor:string=white
+
+facilityBannerBorderColor:string=#0000CC
+facilityBannerHeight:string=60px
+facilityBannerFontColor:string=black
+facilityBannerFontSize:string=40px
+facilityBannerFontLeftMargin:string=120px
+
+facility3TMRIBackgroundColor:string=#FF9933
+facility3TMRIFontColor:string=black
+facility3TMRIBannerIcon:string=threet-mri-banner.jpg
+facility3TMRIPortletIcon:string=threet-mri-portlet.jpg
+
+facilityHEFBackgroundColor:string=#669966
+facilityHEFFontColor:string=black
+facilityHEFBannerIcon:string=hef-banner.jpg
+facilityHEFPortletIcon:string=hef-portlet.jpg
+
+facilityHighFieldBackgroundColor:string=#FFFF66
+facilityHighFieldFontColor:string=black
+facilityHighFieldBannerIcon:string=high-field-banner.jpg
+facilityHighFieldPortletIcon:string=high-field-portlet.jpg
+
+
+
+
+
 
 linkColor:string=#336699
 linkActiveColor:string=#ff6633
 linkVisitedColor:string=#336633
-# another possibility is green #66cc33
 
 borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
-
-globalBorderColor:string=#dee7ec
-globalBackgroundColor:string=#ffffff
-globalFontColor:string=#333333
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
@@ -48,13 +87,3 @@ portalMinWidth:string=70em
 # Catherine Williams modified the following two variables
 columnOneWidth:string=20em
 columnTwoWidth:string=25em
-
-# added by Catherine Williams
-# colorZero is the color of the global nav tabs and default portlet headers
-# Numbers here (Zero, One, Two) correspond to colors of graphics (arrow0.gif, arrow1.gif, arrow2.gif, background1.gif etc)
-colorZero:string=#336699
-colorOne:string=#0099ff
-colorTwo:string=#66cc33
-highlightColor:string=#ff6633
-navLineHeight:string=1.1em
-wideColumnTwo:int=24

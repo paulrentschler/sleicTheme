@@ -11,7 +11,7 @@
 /* ---- GENERAL ---- */
 
 body {
-  background-color: #0000CC;
+  background-color: &dtml-headerFooterBackgroundColor;;
 }
 
 body #portal-columns {
@@ -60,20 +60,19 @@ img.no-photo {
 
 #portal-searchbox #portal-advanced-search {
   clear: none;
-  color: #AAA;
   margin-left: 1em;
 }
 
 #portal-advanced-search a:link, 
 #portal-advanced-search a:active,
 #portal-advanced-search a:visited { 
-	color: #AAA;
+	color: &dtml-headerLinkColor;;
 	padding: 0.1em 0.3em;
 	text-decoration: underline;
 }
 
 #portal-advanced-search a:hover {
-  background-color: #AAA; 
+  background-color: &dtml-headerLinkColor;; 
 	color: black;
 	text-decoration: none;
 }
@@ -105,7 +104,7 @@ img.no-photo {
 }
 
 #logos #portal-logo div {
-  color: #666666;
+  color: &dtml-headerFooterBackgroundColor;;
   font-size: 10px
   margin: 0;
   padding: 0;
@@ -115,49 +114,15 @@ img.no-photo {
   color: white;
 }
  
-/*
-#logos {
-  clear: both;
-	height: 160px;
-  margin: 0;
-  padding: 0;
-}
-
-#logos #section-logo {
-	background-color: white;
-	float: right;
-	height: 150px;
-	margin: 0 20px 2px 2px;
-	padding: 4px;
-	width: 470px;
-}
-
-#logos #section-logo img {
-  border: 0;
-}
-
-#logos #portal-logo {
-	display: block;
-	margin-right: 500px;
-	padding-top: 60px;
-}
-
-#logos #portal-logo img {
-	border: 0;
-	display: block;
-	margin: 0 auto;
-}
-*/
-
 
 
 
 /* ---- GLOBAL NAVIGATION ---- */
 
 #portal-globalnav {
-  background-color: #0000FF;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  background-color: &dtml-globalBackgroundColorNonSelected;;
+  border-top: 1px solid &dtml-globalBorderColor;;
+  border-bottom: 1px solid &dtml-globalBorderColor;;
   margin: 0;
   padding: 0;
 }
@@ -169,7 +134,7 @@ img.no-photo {
 #portal-globalnav li a {
   background-color:transparent;
   border: 0 none;
-  color: white;
+  color: &dtml-globalFontColorNonSelected;;
   height: 2em;
   margin: 0.5em 0;
   padding: 0 1.25em;
@@ -181,10 +146,10 @@ img.no-photo {
 /* ---- BREADCRUMBS ---- */
 
 #portal-breadcrumbs {
-	background-color: white; 
+	background-color: &dtml-breadcrumbsBackgroundColor;; 
 	border: 0 none;
 	clear: both;
-	color: #666;
+	color: &dtml-breadcrumbsFontColor;;
 	margin: 0;
 	padding: 0.25em 1em;
 }
@@ -192,13 +157,13 @@ img.no-photo {
 #portal-breadcrumbs a,
 #portal-breadcrumbs a:link,
 #portal-breadcrumbs a:visited {
-	color: #336699;
+	color: &dtml-breadcrumbsLinkColor;;
 	text-decoration: underline;
 }
 
 #portal-breadcrumbs a:hover {
-	background-color: #336699;
-	color: white;
+	background-color: &dtml-breadcrumbsLinkColor;;
+	color: &dtml-breadcrumbsBackgroundColor;;
 	text-decoration: none;
 }
 
@@ -214,81 +179,43 @@ img.no-photo {
 }
 
 #portal-personaltools li {
-  color: white;
+  color: &dtml-personalBarFontColor;;
 }
 
 #portal-personaltools li a {
-  color: white;
+  color: &dtml-personalBarLinkColor;;
 }
 
 #portal-personaltools li a:hover {
   text-decoration: underline;
 }
-
-/*
-#portal-personaltools	{
-	border-top: 0 none;
-	border-right: 0 none;
-	border-bottom: 0 none;
-	border-left: 0 none;
-	float: left;
-	margin: 37px 0 0 0;
-	padding: 0;
-	text-align: left;
-}
-
-#portal-personaltools	li {
-	background-color: white;
-	font-size: 12px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding: 0;
-}
-
-#portal-personaltools	li a,
-#portal-personaltools li a:link,
-#portal-personaltools li a:visited {
-  background-color: white;
-  color: #666;
-  padding: 1px 7px;
-  text-decoration: underline;
-}
-
-#portal-personaltools li a:hover {
-  background-color: #666;
-  color: white;
-  text-decoration: none;
-}
-*/
 
 
 
 
 /* ---- FACILITY BANNERS ---- */
 #facility_banner {
-  border-bottom: 1px solid #0000CC;
-  height: 60px;
+  border-bottom: 1px solid &dtml-facilityBannerBorderColor;;
+  height: &dtml-facilityBannerHeight;;
 }
 
 #facility_banner h1 {
-  color: black;
-  font-size: 40px;
-  margin-left: 120px;
+  color: &dtml-facilityBannerFontColor;;
+  font-size: &dtml-facilityBannerFontSize;;
+  margin-left: &dtml-facilityBannerFontLeftMargin;;
   margin-top: 0;
 }
 
 #facility_banner.high-field {
-  background: #FFFF66 url('high-field-banner.jpg') top left no-repeat;
+  background: &dtml-facilityHighFieldBackgroundColor; url(&dtml-facilityHighFieldBannerIcon;) top left no-repeat;
 }
 
 #facility_banner.hef {
-  background: #669966 url('hef-banner.jpg') top left no-repeat;
+  background: &dtml-facilityHEFBackgroundColor; url(&dtml-facilityHEFBannerIcon;) top left no-repeat;
 }
 
 #facility_banner.threet-mri {
-  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat;
+  background: &dtml-facility3TMRIBackgroundColor; url(&dtml-facility3TMRIBannerIcon;) top left no-repeat;
 }
 
 
@@ -441,40 +368,6 @@ ul.list {
 	list-style-image: none;
 }
 
-/*
-.documentActions {
-  margin-top: 3em;
-}
-
-#content h1.documentFirstHeading {
-  background-color: #EAEAEA;
-  margin: 0;
-  padding: 0.25em;
-}
-
-#content .documentDescription {
-  background-color: #EAEAEA;
-  padding: 0.25em;
-}
-
-#content h2.documentDescription {
-  color: black;
-  font-size: 100%;
-}
-
-#content #plone-document-byline {
-  background-color: #EAEAEA;
-	color: black;
-	font-size: 85%;
-	font-weight: normal;
-	margin: 0;
-	padding: 0.25em;
-}
-
-#documentEditable #content a.link-parent {
-  background-color: #EAEAEA;
-}
-*/
 
 
 
@@ -683,15 +576,15 @@ dd.portletItem .navTreeCurrentItem {
 }
 
 .section-welcome .portletsBelowContentA .portlet dt.portletHeader {
-  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat;
+  background: &dtml-facility3TMRIBackgroundColor; url(&dtml-facility3TMRIPortletIcon;) top left no-repeat;
 }
 
 .section-welcome .portletsBelowContentB .portlet dt.portletHeader {
-  background: #669966 url('hef-portlet.jpg') top left no-repeat;
+  background: &dtml-facilityHEFBackgroundColor; url(&dtml-facilityHEFPortletIcon;) top left no-repeat;
 }
 
 .section-welcome .portletsBelowContentC .portlet dt.portletHeader {
-  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat;
+  background: &dtml-facilityHighFieldBackgroundColor; url(&dtml-facilityHighFieldPortletIcon;) top left no-repeat;
 }
 
 
@@ -850,9 +743,9 @@ table.eventTable td .eventCanceled {
 /* ---- FOOTER ---- */
 
 #portal-footer {
-  background-color: #0000CC;
+  background-color: &dtml-headerFooterBackgroundColor;;
 	border: none;
-	color: #AAA;
+	color: &dtml-headerLinkColor;;
 	float: none;
 	font-weight: normal;
 	line-height: 1.2em;
@@ -1031,65 +924,6 @@ table.eventTable td .eventCanceled {
 	border-top: none !important; 
 }
 
-
-
-
-
-/**** ------------------------------------ NOT VETTED BEYOND HERE ------------------------------------ ****/ 
-
-
-
-
-
-
-
-/* --- COLORS --- */
-
-/* -- Color 1 (blue) headers, footers, backgrounds and icons -- */
-/*
-#typeOnePortlet .portletHeader {
-	background: &dtml-colorOne;;
-	color: #fff;
-}
-*/
-
-/* -- Color 2 (green) headers, footers, backgrounds and icons -- */
-/*
-#typeTwoPortlet .portletHeader {
-	background: &dtml-colorTwo;;
-	color: #fff;
-}
-*/
-
-/* -- Color 3 (orange) headers, footers, backgrounds and icons -- */
-/*	
-#typeThreePortlet .portletHeader,
-#subspecialtyList .portletHeader {
-	background: &dtml-highlightColor;;
-	color: #fff;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-/* ----- HOLIDAY - OFFICE CLOSED NOTICE ----- */
-.vacation_msg {
-  background-color: #ffcccc;
-  border: 1px solid #FF6633;
-  color: black;
-  padding: 1em;
-
-	display: none;
-	visiblity: hidden;
-}
 
 
 /* </dtml-with> */

@@ -3,15 +3,13 @@
   
   Author: Paul Rentschler <par117@psu.edu>
 
-  <dtml-with base_properties> (do not remove this)
-  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
 */
 
 
 /* ---- GENERAL ---- */
 
 body {
-  background-color: &dtml-headerFooterBackgroundColor;;
+  background-color: #0000CC;
 }
 
 body #portal-columns {
@@ -66,13 +64,13 @@ img.no-photo {
 #portal-advanced-search a:link, 
 #portal-advanced-search a:active,
 #portal-advanced-search a:visited { 
-	color: &dtml-headerLinkColor;;
+	color: #AAA;
 	padding: 0.1em 0.3em;
 	text-decoration: underline;
 }
 
 #portal-advanced-search a:hover {
-  background-color: &dtml-headerLinkColor;; 
+  background-color: #AAA; 
 	color: black;
 	text-decoration: none;
 }
@@ -104,7 +102,7 @@ img.no-photo {
 }
 
 #logos #portal-logo div {
-  color: &dtml-headerFooterBackgroundColor;;
+  color: #0000CC;
   font-size: 10px
   margin: 0;
   padding: 0;
@@ -120,9 +118,9 @@ img.no-photo {
 /* ---- GLOBAL NAVIGATION ---- */
 
 #portal-globalnav {
-  background-color: &dtml-globalBackgroundColorNonSelected;;
-  border-top: 1px solid &dtml-globalBorderColor;;
-  border-bottom: 1px solid &dtml-globalBorderColor;;
+  background-color: #0000AA;
+  border-top: 1px solid #DEE7EC;
+  border-bottom: 1px solid #DEE7EC;
   margin: 0;
   padding: 0;
 }
@@ -133,23 +131,35 @@ img.no-photo {
 
 #portal-globalnav li a {
   background-color:transparent;
-  border: 0 none;
-  color: &dtml-globalFontColorNonSelected;;
+	border: 0 none;
+  color: white;
   height: 2em;
   margin: 0.5em 0;
   padding: 0 1.25em;
 }
 
+#portal-globalnav li.selected a {
+	background-color: white;
+	border: 1px solid white;
+	color: black;
+}
+
+#portal-globalnav li a:hover {
+	background-color: white;
+	border-bottom: 1px solid white;
+	color: black;
+}
+		
 
 
 
 /* ---- BREADCRUMBS ---- */
 
 #portal-breadcrumbs {
-	background-color: &dtml-breadcrumbsBackgroundColor;; 
+	background-color: white; 
 	border: 0 none;
 	clear: both;
-	color: &dtml-breadcrumbsFontColor;;
+	color: #666;
 	margin: 0;
 	padding: 0.25em 1em;
 }
@@ -157,13 +167,13 @@ img.no-photo {
 #portal-breadcrumbs a,
 #portal-breadcrumbs a:link,
 #portal-breadcrumbs a:visited {
-	color: &dtml-breadcrumbsLinkColor;;
+	color: #336699;
 	text-decoration: underline;
 }
 
 #portal-breadcrumbs a:hover {
-	background-color: &dtml-breadcrumbsLinkColor;;
-	color: &dtml-breadcrumbsBackgroundColor;;
+	background-color: #336699;
+	color: white;
 	text-decoration: none;
 }
 
@@ -179,11 +189,11 @@ img.no-photo {
 }
 
 #portal-personaltools li {
-  color: &dtml-personalBarFontColor;;
+  color: white;
 }
 
 #portal-personaltools li a {
-  color: &dtml-personalBarLinkColor;;
+  color: white;
 }
 
 #portal-personaltools li a:hover {
@@ -195,27 +205,27 @@ img.no-photo {
 
 /* ---- FACILITY BANNERS ---- */
 #facility_banner {
-  border-bottom: 1px solid &dtml-facilityBannerBorderColor;;
-  height: &dtml-facilityBannerHeight;;
+  border-bottom: 1px solid #0000CC;
+  height: 60px;
 }
 
 #facility_banner h1 {
-  color: &dtml-facilityBannerFontColor;;
-  font-size: &dtml-facilityBannerFontSize;;
-  margin-left: &dtml-facilityBannerFontLeftMargin;;
+  color: black;
+  font-size: 40px;
+  margin-left: 120px;
   margin-top: 0;
 }
 
 #facility_banner.high-field {
-  background: &dtml-facilityHighFieldBackgroundColor; url(&dtml-facilityHighFieldBannerIcon;) top left no-repeat;
+  background: #FFFF66 url(high-field-banner.jpg) top left no-repeat;
 }
 
 #facility_banner.hef {
-  background: &dtml-facilityHEFBackgroundColor; url(&dtml-facilityHEFBannerIcon;) top left no-repeat;
+  background: #669966; url('hef-banner.jpg') top left no-repeat;
 }
 
 #facility_banner.threet-mri {
-  background: &dtml-facility3TMRIBackgroundColor; url(&dtml-facility3TMRIBannerIcon;) top left no-repeat;
+  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat;
 }
 
 
@@ -242,13 +252,13 @@ p.contactInfo {
 .documentContent p a:visited 
 .documentContent dd a:visited,
 .documentContent li a:visited {
-	color: &dtml-linkVisitedColor;;
+	color: #336633;
 }
 
 .documentContent p a:active, .documentContent p a:hover,
 .documentContent dd a:active, .documentContent dd a:hover,
 .documentContent li a:active, .documentContent li a:hover {
-	color: &dtml-linkActiveColor;;
+	color: #FF6633;
 }
 
 .emphasis {
@@ -313,7 +323,7 @@ h3 abbr {
 }
 
 h3 a, h4 a, h5 a, h6 a {
-	color: &dtml-linkColor; !important;
+	color: #336699 !important;
 	text-decoration: underline;
 }
 
@@ -322,12 +332,12 @@ h3 a, h4 a, h5 a, h6 a {
 }
 
 h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-	color: &dtml-linkActiveColor; !important;
+	color: #FF6633 !important;
 	text-decoration: underline;
 }
 
 h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-	color: &dtml-linkVisitedColor; !important;
+	color: #336633 !important;
 	text-decoration: underline;
 }
 
@@ -387,7 +397,7 @@ table.listing th img {
 }
 
 table.listing a:hover {
-	color: &dtml-linkActiveColor;;
+	color: #FF6633;
 }
 
 table.listing a {
@@ -510,17 +520,17 @@ table.gradProgs tbody tr td {
 
 .navTreeItem a:hover, 
 dd.portletItem .navTreeItem a:hover {
-	border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBackgroundColor;; /* needed to avoid jiggle on hover */
-	color: &dtml-highlightColor;;
+	border: 1px solid white; /* needed to avoid jiggle on hover */
+	color: #FF6633;
 	text-decoration: underline;
 }
 
 dd.portletItem .navTreeCurrentItem { 
 	border-bottom: none !important; 
-	border-left: 2px &dtml-borderStyle; &dtml-highlightColor; !important; 
+	border-left: 2px solid #FF6633 !important; 
 	border-right: none !important; 
 	border-top: none !important; 
-	color: &dtml-highlightColor;;
+	color: #FF6633;
 	padding-left: 0.35em;
 	text-decoration: none;
 }
@@ -576,15 +586,15 @@ dd.portletItem .navTreeCurrentItem {
 }
 
 .section-welcome .portletsBelowContentA .portlet dt.portletHeader {
-  background: &dtml-facility3TMRIBackgroundColor; url(&dtml-facility3TMRIPortletIcon;) top left no-repeat;
+  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat;
 }
 
 .section-welcome .portletsBelowContentB .portlet dt.portletHeader {
-  background: &dtml-facilityHEFBackgroundColor; url(&dtml-facilityHEFPortletIcon;) top left no-repeat;
+  background: #669966 url('hef-portlet.jpg') top left no-repeat;
 }
 
 .section-welcome .portletsBelowContentC .portlet dt.portletHeader {
-  background: &dtml-facilityHighFieldBackgroundColor; url(&dtml-facilityHighFieldPortletIcon;) top left no-repeat;
+  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat;
 }
 
 
@@ -594,6 +604,7 @@ dd.portletItem .navTreeCurrentItem {
 .section-welcome #portlets-below .portlet dt.portletHeader a:visited {
   background-color: transparent;
   color: black;
+  line-height: 1.2em;
 	text-decoration: underline;
 }
 
@@ -663,7 +674,7 @@ table.eventTable td .eventCanceled {
 
 .eventDetails table th {
   background-color: white;
-  color: &dtml-discreetColor;;
+  color: #76797C;
   width: 6em;
 }
 
@@ -743,9 +754,9 @@ table.eventTable td .eventCanceled {
 /* ---- FOOTER ---- */
 
 #portal-footer {
-  background-color: &dtml-headerFooterBackgroundColor;;
+  background-color: #0000CC;
 	border: none;
-	color: &dtml-headerLinkColor;;
+	color: #AAA;
 	float: none;
 	font-weight: normal;
 	line-height: 1.2em;
@@ -925,8 +936,6 @@ table.eventTable td .eventCanceled {
 }
 
 
-
-/* </dtml-with> */
 
 /* Latest version of the documentation on pre-defined properties from Plone 
    can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */

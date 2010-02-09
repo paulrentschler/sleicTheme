@@ -20,6 +20,9 @@ body #portal-columns {
   clear: both;
 }
 
+a {
+	color: blue;
+}
 
 
 
@@ -133,6 +136,7 @@ img.no-photo {
   background-color:transparent;
 	border: 0 none;
   color: white;
+  font-size: 1.2em;
   height: 2em;
   margin: 0.5em 0;
   padding: 0 1.25em;
@@ -167,12 +171,12 @@ img.no-photo {
 #portal-breadcrumbs a,
 #portal-breadcrumbs a:link,
 #portal-breadcrumbs a:visited {
-	color: #336699;
+	color: #0000CC;
 	text-decoration: underline;
 }
 
 #portal-breadcrumbs a:hover {
-	background-color: #336699;
+	background-color: #0000CC;
 	color: white;
 	text-decoration: none;
 }
@@ -211,9 +215,10 @@ img.no-photo {
 
 #facility_banner h1 {
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 120px;
   margin-top: 0;
+  padding-top: 8px;
 }
 
 #facility_banner.high-field {
@@ -252,13 +257,13 @@ p.contactInfo {
 .documentContent p a:visited 
 .documentContent dd a:visited,
 .documentContent li a:visited {
-	color: #336633;
+/*	color: #336633; */
 }
 
 .documentContent p a:active, .documentContent p a:hover,
 .documentContent dd a:active, .documentContent dd a:hover,
 .documentContent li a:active, .documentContent li a:hover {
-	color: #FF6633;
+/*	color: #FF6633; */
 }
 
 .emphasis {
@@ -276,18 +281,18 @@ fieldset {
 
 h1 {
 	border-bottom: 0 none;
-	color: #336699;
+	color: #0000CC;
 	font-size: 170%;
 	font-weight: bold;
 }
 
 h1 abbr {
-  color: #336699;
+  color: #0000CC;
 }
 
 h2 {
-	border-bottom: 1px solid #CCC;
-	color: #FF6633;
+	border-bottom: 1px solid #999;
+	color: #0000CC;
 	font-size: 150%;
 	font-weight: bold;
 	margin-bottom: 0.5em;
@@ -295,35 +300,35 @@ h2 {
 }
 
 h2 abbr {
-  color: #FF6633;
+  color: #0000CC;
 }
 
 h2 a,
 h2 a:link,
 h2 a:visited {
-	color: #FF6633 !important;
+	color: #0000CC !important;
 	text-decoration: underline;
 }
 
 h2 a:hover {
-	color: #336699 !important;
+	color: #0000CC !important;
 	text-decoration: none;
 }
 
 h3 {
 	border: none;
-	color: #336699;
+	color: #0000CC;
 	font-size: 110%;
 	font-weight: bold;
 	margin-top: 0.75em;
 }
 
 h3 abbr {
-  color: #336699;
+  color: #0000CC;
 }
 
 h3 a, h4 a, h5 a, h6 a {
-	color: #336699 !important;
+	color: #0000CC !important;
 	text-decoration: underline;
 }
 
@@ -332,12 +337,12 @@ h3 a, h4 a, h5 a, h6 a {
 }
 
 h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-	color: #FF6633 !important;
+	color: #0000CC !important;
 	text-decoration: underline;
 }
 
 h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-	color: #336633 !important;
+	color: #0000CC !important;
 	text-decoration: underline;
 }
 
@@ -397,7 +402,7 @@ table.listing th img {
 }
 
 table.listing a:hover {
-	color: #FF6633;
+/*	color: #FF6633; */
 }
 
 table.listing a {
@@ -475,19 +480,27 @@ table.gradProgs tbody tr td {
 	text-transform: none;
 }
 	
-.portletHeader a:link, .portletHeader a:visited { 
+.portletHeader a:link,
+.portletHeader a:visited { 
 	color: #fff;
 	display: block;
 	text-decoration: underline;
 }
 
-.portletAssignments .portletHeader a:link, .portletAssignments .portletHeader a:visited { 
-	color: #00f;
+.portletAssignments .portletHeader a:link, 
+.portletAssignments .portletHeader a:visited { 
+/*	color: #0000FF; */
 	display: block;
 	text-decoration: underline;
 }
 
-.portlet .eventTitle a, .portlet .articleTitle a {
+.portletItem a:visited, 
+.portletFooter a:visited {
+	color: purple;
+}
+	
+.portlet .eventTitle a,
+.portlet .articleTitle a {
   font-size: 120%;
   font-variant: small-caps;
   font-weight: bold;
@@ -514,14 +527,15 @@ table.gradProgs tbody tr td {
 
 /* --- NAVIGATION PORTLET --- */
 
-.navTreeItem a, dd.portletItem .navTreeItem a {
+.navTreeItem a, 
+dd.portletItem .navTreeItem a {
 	margin: 0.5em 0.2em;
 }
 
 .navTreeItem a:hover, 
 dd.portletItem .navTreeItem a:hover {
 	border: 1px solid white; /* needed to avoid jiggle on hover */
-	color: #FF6633;
+/*	color: #FF6633; */
 	text-decoration: underline;
 }
 
@@ -651,14 +665,14 @@ table.eventTable td .talktitle {
 }
 
 table.eventTable td .eventCanceled {
-  background-color: #336699;
+  background-color: #0000CC;
   color: white;
   padding: 2px;
 }
 
 .eventDetails {
-  background-color: #336699;
-  border: 1px solid #336699;
+  background-color: #0000CC;
+  border: 1px solid #0000CC;
   padding: 0px 1px 1px 2px;
 }
 
@@ -835,107 +849,3 @@ table.eventTable td .eventCanceled {
 }
 
 	
-
-
-/* ---- FOOTER PORTLETS ---- */
-
-#footer-portlets {
-  margin: 1em 0 0 0;
-}
-
-#footer-portlets dl.portlet {
-  background-color: black;
-  border: none;
-}
-
-#footer-portlets .FooterPortletA,
-#footer-portlets .FooterPortletB,
-#footer-portlets .FooterPortletC,
-#footer-portlets .FooterPortletD,
-#footer-portlets .FooterPortletE {
-  float: left;
-  width: 20%;
-}
-
-#footer-portlets .FooterPortletF {
-  display: none;
-  visiblity: hidden;
-}
-
-#footer-portlets .portletHeader {
-  background-color: black;
-  text-transform: uppercase;
-}
-
-#footer-portlets .FooterPortletA .portletHeader a { background-color: #0099FF;  color; #FFFFFF; }
-#footer-portlets .FooterPortletB .portletHeader a { background-color: #66CC33;  color; #FFFFFF; }
-#footer-portlets .FooterPortletC .portletHeader a { background-color: #FF6633;  color; #FFFFFF; }
-#footer-portlets .FooterPortletD .portletHeader a { background-color: #FF6633;  color; #FFFFFF; }
-#footer-portlets .FooterPortletE .portletHeader a { background-color: #336699;  color; #FFFFFF; }
-
-#footer-portlets .portletHeader a,
-#footer-portlets .portletHeader a:link,
-#footer-portlets .portletHeader a:visited {
-  color: white;
-  padding: 0.2em 0.5em;
-  text-decoration: none;
-}
-
-#footer-portlets .portletHeader a:hover {
-  background-color: #AAA;
-  color: black;
-}
-
-
-#footer-portlets .portletItem {
-  padding: 0 0.5em 0.5em 1.5em;
-}
-
-#footer-portlets .portletItem a,
-#footer-portlets .portletItem a:link,
-#footer-portlets .portletItem a:visited,
-#footer-portlets .portletItem a.state-published,
-#footer-portlets .portletItem a.state-published:link,
-#footer-portlets .portletItem a.state-published:visited {
-  background-color: black;
-  border: none;
-  color: #AAA !important;
-  font-size: 0.88em;
-  margin: 0 1em 0 0;
-  padding: 0.5em 0.2em;
-  text-decoration: none;
-}
-
-#footer-portlets dl.portletCollection dd {
-  line-height: 1em;
-  margin: 0;
-  padding: 0 0.5em 0 1.5em;
-}
-
-#footer-portlets dl.portletCollection .even {
-  background-color: black;
-  border: 0;
-}
-
-#footer-portlets dl.portlet dd.portletItem a.tile:hover,
-#footer-portlets dl.portlet dd.portletItem ul li a:hover {
-  background-color: #AAA !important;
-  color: black !important;
-}
-
-#footer-portlets .portletItem a.state-private {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-#footer-portlets dd.portletItem .navTreeCurrentItem { 
-	border-bottom: none !important; 
-	border-left: none !important; 
-	border-right: none !important; 
-	border-top: none !important; 
-}
-
-
-
-/* Latest version of the documentation on pre-defined properties from Plone 
-   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */

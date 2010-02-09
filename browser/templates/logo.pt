@@ -4,19 +4,6 @@
 
 <div id="logos">
 
-	<tal:comment tal:replace="nothing">
-	  <div id="portal-logo">
-		  <h1>SLEIC</h1>
-		  <div>
-		    <span class="logo-accent">S</span>ocial, 
-		    <span class="logo-accent">L</span>ife, and 
-		    <span class="logo-accent">E</span>ngineering science 
-		    <span class="logo-accent">I</span>maging 
-		    <span class="logo-accent">C</span>enter
-		  </div>
-		</div>
-	</tal:comment>
-
 	<a metal:define-macro="portal_logo"
 	   id="portal-logo"
 		 accesskey="1"

@@ -13,7 +13,7 @@
   Requires: findSpecialtyForTopic.py
   Changes:
     - Renamed the table headings (they were created from the field names, which don't describe
-       the contents well e.g. the description field is actually the title of the talk).
+       the contents well).
     - Got rid of the icons
 		- Changed the default message that appears if the collection contains no people
 		- ??? Made the "up one level" link only available if you are logged in

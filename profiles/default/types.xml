@@ -9,6 +9,8 @@
           meta_type="Factory-based Type Information with dynamic views"/>
   <object name="ExternalMeeting"
           meta_type="Factory-based Type Information with dynamic views"/>
+  <object name="Facility"
+          meta_type="Factory-based Type Information with dynamic views"/>
   <object name="File"
           meta_type="Factory-based Type Information with dynamic views"/>
   <object name="FundingOpportunity"

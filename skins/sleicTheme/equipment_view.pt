@@ -1,0 +1,216 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+  <head><title></title></head>
+
+  <body>
+    <metal:fill fill-slot="main">
+	    <tal:main-macro metal:define-macro="main"
+											tal:define="kssClassesView context/@@kss_field_decorator_view;
+																	getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+																	templateId template/getId;
+																	text here/getBody;
+																	parentFacility view/context/@@plone/getCurrentFolder;">
+	
+	      <div tal:replace="structure provider:plone.abovecontenttitle" />
+	
+	      <h1 class="documentFirstHeading equipmentHeading">
+	        <tal:type tal:repeat="eqType context/getEquipmentType">
+	          <span tal:replace="eqType">Type of Equipment</span>
+	        </tal:type>
+	      </h1>
+	
+	      <div tal:replace="structure provider:plone.belowcontenttitle" />
+	
+	      <p class="equipmentModelNumber">
+	        <span id="equipmentModelNumberLabel">Model #:</span>
+		      <metal:field use-macro="python:here.widget('title', mode='view')">
+			      Title
+		      </metal:field>
+	      </p>
+	
+	      <div tal:replace="structure provider:plone.abovecontentbody" />
+	
+	      <div id="equipmentSidebar">
+					<tal:ifEquipmentImageExists tal:condition="exists:context/eqImage">
+						<tal:equipmentImage tal:define="eqImageSrc string:${here/eqImage/absolute_url}_${here/eqImageSize};
+						                                eqImageWidth python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).width;
+						                                eqImageHeight python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).height">
+							<div id="equipmentImage">
+							  <a href="" tal:attributes="href context/eqImage/absolute_url"><img tal:attributes="src eqImageSrc;
+																																																																			width eqImageWidth;
+																																																																			height eqImageHeight;
+																																																																			title string:photo of the equipment;
+																																																																			alt context/title;" /></a>
+						  </div>
+						  <div id="equipmentImageCaption" 
+						       tal:attributes="style string:width:${eqImageWidth}px;"
+						       tal:condition="python:here.caption">
+						  	<p class="discreet">
+						  	  <tal:imageCaption tal:replace="context/getCaption">Caption</tal:imageCaption>
+						  	</p>
+						  </div>
+						</tal:equipmentImage>
+					</tal:ifEquipmentImageExists>
+					
+					<div id="equipmentExternalUsers" tal:condition="python:here.externalUsers and here.externalUsers != 'Not sure'">
+					  <h3>Available to non-Penn State users?</h3>
+					  <p><span tal:replace="context/externalUsers">Yes or No</span></p>
+					</div>
+	
+			    <div id="equipmentContact">
+						<tal:ifLocalContact tal:condition="python:here.eqContactName or here.eqContactEmail or here.eqContactPhone">
+							<h3>Contact Information</h3>
+							<tal:ifContactImageExists tal:condition="exists:here/eqContactImage">
+								<div id="equipmentContactImage">
+								  <img tal:attributes="src context/eqContactImage/absolute_url;
+								                       title string:photo of the contact person;
+								                       alt here/eqContactName;
+								                       width here/eqContactImage/width;
+								                       height here/eqContactImage/height;" />
+							  </div>
+							</tal:ifContactImageExists>
+							<p>
+								<tal:ifContactNameExists tal:condition="python:here.eqContactName">
+									<tal:ifContactTitleExists tal:condition="python:here.eqContactTitle">
+										<tal:contactName tal:replace="context/eqContactName">Contact name</tal:contactName>, 
+										<tal:contactTitle tal:replace="context/eqContactTitle">Contact title</tal:contactTitle><br />
+									</tal:ifContactTitleExists>
+									<tal:ifContactTitleNotExists tal:condition="python:not here.eqContactTitle">
+										<tal:contactName tal:replace="context/eqContactName">Contact name</tal:contactName><br />
+									</tal:ifContactTitleNotExists>
+								</tal:ifContactNameExists>
+								
+								<tal:ifContactNameNotExists tal:condition="python:not here.eqContactName">
+									<tal:ifContactTitleExists tal:condition="python:here.eqContactTitle"> 
+										<tal:contactTitle tal:replace="context/eqContactTitle">Contact title</tal:contactTitle><br />
+									</tal:ifContactTitleExists>
+								</tal:ifContactNameNotExists>
+						
+								<tal:ifContactEmailExists tal:condition="python:here.eqContactEmail">
+									<a href="" tal:attributes="href string:mailto:${context/eqContactEmail}"
+														 tal:content="context/eqContactEmail">Contact e-mail</a><br />
+								</tal:ifContactEmailExists>
+								<tal:contactPhone tal:condition="python:here.eqContactPhone">
+									<span tal:replace="context/eqContactPhone">Contact phone</span>
+								</tal:contactPhone>
+					    </p>
+					    	
+					  </tal:ifLocalContact>
+					  
+						<tal:ifNotLocalContact tal:condition="python: not here.eqContactName and not here.eqContactEmail and not here.eqContactPhone">
+						  <tal:ifParentFacilityExists tal:condition="exists:parentFacility/verifyFacility">
+							  <tal:ifFacilityContactExists tal:condition="python:parentFacility.contactName or parentFacility.contactEmail or parentFacility.contactPhone">
+							  	<h3>Contact Information</h3>
+									<tal:ifContactImageExists tal:condition="exists:parentFacility/contactImage">
+										<div id="equipmentContactImage">
+										  <img tal:attributes="src parentFacility/contactImage/absolute_url;
+																					 title string:photo of the contact person;
+																					 alt parentFacility/contactName;
+																					 width parentFacility/contactImage/width;
+																					 height parentFacility/contactImage/height;" />
+									  </div>
+									</tal:ifContactImageExists>
+									<p>
+										<tal:ifContactNameExists tal:condition="python:parentFacility.contactName">
+											<tal:ifContactTitleExists tal:condition="python:parentFacility.contactTitle">
+												<tal:contactName tal:replace="parentFacility/getContactName">Contact name</tal:contactName>, 
+												<tal:contactTitle tal:replace="parentFacility/getContactTitle">Contact title</tal:contactTitle><br />
+											</tal:ifContactTitleExists>
+											<tal:ifContactTitleNotExists tal:condition="python:not parentFacility.contactTitle">
+												<tal:contactName tal:replace="parentFacility/getContactName">Contact name</tal:contactName><br />
+											</tal:ifContactTitleNotExists>
+										</tal:ifContactNameExists>
+										
+										<tal:ifContactNameNotExists tal:condition="python:not parentFacility.contactName">
+											<tal:ifContactTitleExists tal:condition="python:parentFacility.contactTitle">
+												<tal:contactTitle tal:replace="parentFacility/getContactTitle">Contact title</tal:contactTitle><br />
+											</tal:ifContactTitleExists>
+										</tal:ifContactNameNotExists>
+										
+										<tal:ifContactEmailExists tal:condition="exists:parentFacility/contactEmail">
+											<a href="" tal:attributes="href string:mailto:${parentFacility/contactEmail}"
+																 tal:content="parentFacility/contactEmail">Contact e-mail</a><br />
+										</tal:ifContactEmailExists>
+										<tal:contactPhone tal:replace="parentFacility/contactPhone | nothing">Contact phone</tal:contactPhone>
+								   </p>
+							  </tal:ifFacilityContactExists>
+							</tal:ifParentFacilityExists>
+						</tal:ifNotLocalContact>
+			    </div> <!-- end equipmentContact -->
+			   
+			
+					<div id="equipmentFacility">
+						<tal:ifParentFacilityExists tal:condition="exists:parentFacility/verifyFacility">
+							<h3>Equipment Location</h3>
+							<p>
+								<a href="" tal:attributes="href parentFacility/absolute_url">
+								<span id="equipmentFacilityTitle" tal:content="parentFacility/Title">Facility name</span></a><br />
+								
+								<tal:ifCampusExists tal:condition="python:parentFacility.campus and parentFacility.campus != '--'">
+									<span id="equipmentCampusLabel">Campus:</span>
+									<tal:campus tal:replace="context/getCampus">Campus</tal:campus><br />		
+								</tal:ifCampusExists> 
+								
+								<tal:ifAddressExists tal:condition="python:parentFacility.address">
+									<tal:address tal:replace="structure python:context.getAddress().replace('\n','<br />')">Address</tal:address><br />						
+								</tal:ifAddressExists>
+								
+								<tal:ifCityExists tal:condition="python:parentFacility.city">
+									<tal:city tal:replace="context/getCity">City</tal:city>,
+								</tal:ifCityExists>
+								
+								<tal:ifStateExists tal:condition="python:parentFacility.state">
+									<tal:state tal:replace="context/getState">State</tal:state>
+								</tal:ifStateExists>
+								
+								<tal:ifZipCodeExists tal:condition="python:parentFacility.zipcode">
+									<tal:zipcode tal:replace="context/getZipcode">Zip code</tal:zipcode>
+								</tal:ifZipCodeExists>
+							</p>
+						</tal:ifParentFacilityExists>
+					</div> <!-- end equipmentFacility -->
+			    
+	      </div> <!-- end equipment sidebar -->
+	
+	      <p class="documentDescription equipmentDescription" tal:condition="exists:context/description">
+		      <metal:field use-macro="python:here.widget('description', mode='view')">
+			      Description
+		      </metal:field>
+	      </p>
+	      
+	      <div id="equipmentMainContent">
+	      	<tal:ifUsesExist tal:condition="python:here.uses">
+		        <h3>Uses</h3>
+		        <ul tal:repeat="use context/uses">
+		          <li tal:content="use">use</li>
+		        </ul>
+		      </tal:ifUsesExist>
+	        
+	        <tal:ifSpecsExist tal:condition="python:here.specifications">
+		        <h3>Specifications</h3>
+		        <ul tal:repeat="spec context/specifications">
+		          <li tal:content="spec">specification</li>
+		        </ul>
+	        </tal:ifSpecsExist>
+	        
+	        <tal:ifDetailsExist tal:condition="python:here.body">
+	        	<h3>Details</h3>
+	        	<tal:details tal:replace="structure context/getBody">Details</tal:details>
+	        </tal:ifDetailsExist>
+	      </div>
+	      
+	      <div id="equipmentClear"></div>
+	
+	      <div tal:replace="structure provider:plone.belowcontentbody" />
+	
+	    </tal:main-macro>
+   </metal:fill>
+  </body>
+</html>

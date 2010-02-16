@@ -10,6 +10,7 @@
 			<element value="tile 64:64"/>
 			<element value="icon 32:32"/>
 			<element value="listing 16:16"/>
+			<element value="normal 200:200"/>
 			<element value="gallery 500:333"/>
 			<element value="galleryzoom 800:533"/>
 		</property>

@@ -5,6 +5,9 @@
 		<property name="allowed_sizes" type="lines" purge="False">
 			<element value="large 768:768"/>
 			<element value="preview 400:400"/>
+			<element value="mediumLarge 350:350"/>
+			<element value="medium 300:300"/>
+			<element value="small 250:250"/>
 			<element value="mini 200:200"/>
 			<element value="thumb 128:128"/>
 			<element value="tile 64:64"/>

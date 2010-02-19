@@ -29,10 +29,17 @@
 	      <div tal:replace="structure provider:plone.belowcontenttitle" />
 	
 	      <div tal:replace="structure provider:plone.abovecontentbody" />
+
+<tal:block tal:replace="nothing">
+						                                eqImageWidth python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).width;
+						                                eqImageHeight python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).height">
+</tal:block>
 	
 	      <div id="equipmentSidebar">
 					<tal:ifEquipmentImageExists tal:condition="exists:context/eqImage">
 						<tal:equipmentImage tal:define="eqImageSrc string:${here/eqImage/absolute_url}_${here/eqImageSize};
+						                                eqImageWidth string:250px;
+						                                eqImageHeight string:250px;
 						                                eqImageWidth python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).width;
 						                                eqImageHeight python:context.getWrappedField('eqImage').getScale(context, context.eqImageSize).height">
 							<div id="equipmentImage">

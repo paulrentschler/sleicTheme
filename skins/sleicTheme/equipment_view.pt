@@ -20,20 +20,13 @@
 	
 	      <div tal:replace="structure provider:plone.abovecontenttitle" />
 	
-	      <h1 class="documentFirstHeading equipmentHeading">
-	        <tal:type tal:repeat="eqType context/getEquipmentType">
-	          <span tal:replace="eqType">Type of Equipment</span>
-	        </tal:type>
-	      </h1>
-	
-	      <div tal:replace="structure provider:plone.belowcontenttitle" />
-	
-	      <p class="equipmentModelNumber">
-	        <span id="equipmentModelNumberLabel">Model #:</span>
+	      <h1 class="documentFirstHeading equipmentModelNumber">
 		      <metal:field use-macro="python:here.widget('title', mode='view')">
 			      Title
 		      </metal:field>
-	      </p>
+	      </h1>
+	
+	      <div tal:replace="structure provider:plone.belowcontenttitle" />
 	
 	      <div tal:replace="structure provider:plone.abovecontentbody" />
 	
@@ -152,6 +145,7 @@
 							<p>
 								<a href="" tal:attributes="href parentFacility/absolute_url">
 								<span id="equipmentFacilityTitle" tal:content="parentFacility/Title">Facility name</span></a><br />
+								
 								
 								<tal:ifCampusExists tal:condition="python:parentFacility.campus and parentFacility.campus != '--'">
 									<span id="equipmentCampusLabel">Campus:</span>

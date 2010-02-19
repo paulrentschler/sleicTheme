@@ -5,7 +5,7 @@
 		<span i18n:name="current_year" 
 				   tal:define="now modules/DateTime/DateTime" 
 				   tal:content="now/year" />
-		Social, Life, and Engineering sciences Imaging Center.
+		Social, Life, and Engineering Sciences Imaging Center.
 		All Rights Reserved.
 		</span>
 	</p>

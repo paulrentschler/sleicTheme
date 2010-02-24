@@ -16,7 +16,7 @@
 																	getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
 																	templateId template/getId;
 																	text here/getBody;
-																	parentFacility view/context/@@plone/getCurrentFolder;">
+																	parentFacility context/getFacility;">
 	
 	      <div tal:replace="structure provider:plone.abovecontenttitle" />
 	
@@ -151,7 +151,7 @@
 							<h3>Equipment Location</h3>
 							<p>
 								<a href="" tal:attributes="href parentFacility/absolute_url">
-								<span id="equipmentFacilityTitle" tal:content="parentFacility/Title">Facility name</span></a><br />
+								<span id="equipmentFacilityTitle" tal:content="string:SLEIC ${parentFacility/Title}">Facility name</span></a><br />
 								
 								
 								<tal:ifCampusExists tal:condition="python:parentFacility.campus and parentFacility.campus != '--'">

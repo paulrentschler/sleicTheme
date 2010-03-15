@@ -119,7 +119,9 @@ img.no-photo {
   color: white;
 }
  
-
+#portal-header {
+	background: transparent url('header-comp.jpg') no-repeat top right;
+}
 
 
 /* ---- GLOBAL NAVIGATION ---- */
@@ -592,7 +594,7 @@ dd.portletItem .navTreeCurrentItem {
 
 .section-welcome #portlets-below .portlet dt.portletHeader {
   color: black;
-	font-size: 100%;
+	font-size: 110%;
 	font-weight: bold;
 	height: 30px;
   padding: 0.25em 0.25em 0.25em 50px;

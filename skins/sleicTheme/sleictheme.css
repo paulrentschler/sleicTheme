@@ -9,7 +9,7 @@
 /* ---- GENERAL ---- */
 
 body {
-  background-color: #0000CC;
+  background-color: black;
 }
 
 body #portal-columns {
@@ -109,7 +109,7 @@ img.no-photo {
 }
 
 #logos #portal-logo div {
-  color: #0000CC;
+  color: black;
   font-size: 10px
   margin: 0;
   padding: 0;
@@ -119,9 +119,6 @@ img.no-photo {
   color: white;
 }
  
-#portal-header {
-	background: transparent url('header-comp.jpg') no-repeat top right;
-}
 
 
 /* ---- GLOBAL NAVIGATION ---- */
@@ -228,15 +225,18 @@ img.no-photo {
 }
 
 #facility_banner.high-field {
-  background: #FFFF66 url(high-field-banner.jpg) top left no-repeat;
+/*  background: #FFFF66 url(high-field-banner.jpg) top left no-repeat; */
+  background-color: #339933;
 }
 
 #facility_banner.hef {
-  background: #669966 url('hef-banner.jpg') top left no-repeat;
+/*  background: #669966 url('hef-banner.jpg') top left no-repeat; */
+  background-color: #FFCC66;
 }
 
 #facility_banner.threet-mri {
-  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat;
+/*  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat; */
+  background-color: #0099CC;
 }
 
 
@@ -606,15 +606,18 @@ dd.portletItem .navTreeCurrentItem {
 }
 
 .section-welcome .portletsBelowContentA .portlet dt.portletHeader {
-  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat;
+/*  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat; */
+  background-color: #339933;
 }
 
 .section-welcome .portletsBelowContentB .portlet dt.portletHeader {
-  background: #669966 url('hef-portlet.jpg') top left no-repeat;
+/*  background: #669966 url('hef-portlet.jpg') top left no-repeat; */
+  background-color: #FFCC66;
 }
 
 .section-welcome .portletsBelowContentC .portlet dt.portletHeader {
-  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat;
+/*  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat; */
+  background-color: #0099CC;
 }
 
 
@@ -774,7 +777,7 @@ table.eventTable td .eventCanceled {
 /* ---- FOOTER ---- */
 
 #portal-footer {
-  background-color: #0000CC;
+  background-color: black;
 	border: none;
 	color: #AAA;
 	float: none;
@@ -814,7 +817,7 @@ table.eventTable td .eventCanceled {
 #portal-footer a,
 #portal-footer a:link,
 #portal-footer a:visited {
-	background-color: #0000CC;
+	background-color: black;
 	border: none;
 	color: #AAA;
 	text-decoration: underline;
@@ -826,7 +829,7 @@ table.eventTable td .eventCanceled {
 }
 
 #portal-siteactions {
-  background-color: #0000CC;
+  background-color: black;
   border: none;
   color: #AAA;
   margin: 0;
@@ -842,7 +845,7 @@ table.eventTable td .eventCanceled {
 #portal-siteactions li a,
 #portal-siteactions li a:link,
 #portal-siteactions li a:visited {
-	background-color: #0000CC;
+	background-color: black;
 	border: none;
 	color: #AAA;
 	text-decoration: underline;

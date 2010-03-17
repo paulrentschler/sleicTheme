@@ -98,7 +98,7 @@ img.no-photo {
 
 #logos {
   margin-left: 130px;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 
 #logos #portal-logo h1 {
@@ -217,26 +217,26 @@ img.no-photo {
 }
 
 #facility_banner h1 {
-  color: black;
+  color: white;
   font-size: 30px;
   margin-left: 120px;
   margin-top: 0;
   padding-top: 8px;
 }
 
-#facility_banner.high-field {
-/*  background: #FFFF66 url(high-field-banner.jpg) top left no-repeat; */
-  background-color: #339933;
+#facility_banner.threet-mri {
+/*  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat; */
+	background-color: #0099CC;
 }
 
 #facility_banner.hef {
 /*  background: #669966 url('hef-banner.jpg') top left no-repeat; */
-  background-color: #FFCC66;
+  background-color: #663333;
 }
 
-#facility_banner.threet-mri {
-/*  background: #FF9933 url('threet-mri-banner.jpg') top left no-repeat; */
-  background-color: #0099CC;
+#facility_banner.high-field {
+/*  background: #FFFF66 url(high-field-banner.jpg) top left no-repeat; */
+  background-color: #339933;
 }
 
 
@@ -519,7 +519,8 @@ table.gradProgs tbody tr td {
 }
 
 .portlet .eventDate {
-  font-weight: bold;
+  font-weight: normal;
+  text-align: right;
 }
 
 .portlet .imageInPortlet {
@@ -594,9 +595,8 @@ dd.portletItem .navTreeCurrentItem {
 
 .section-welcome #portlets-below .portlet dt.portletHeader {
   color: black;
-	font-size: 110%;
-	font-weight: bold;
-	height: 30px;
+	font-size: 120%;
+	height: 37px;
   padding: 0.25em 0.25em 0.25em 50px;
 }
 
@@ -607,17 +607,18 @@ dd.portletItem .navTreeCurrentItem {
 
 .section-welcome .portletsBelowContentA .portlet dt.portletHeader {
 /*  background: #FF9933 url('threet-mri-portlet.jpg') top left no-repeat; */
-  background-color: #339933;
+  background-color: #0099CC;
 }
 
 .section-welcome .portletsBelowContentB .portlet dt.portletHeader {
 /*  background: #669966 url('hef-portlet.jpg') top left no-repeat; */
-  background-color: #FFCC66;
+/*  background-color: #FFCC66; */
+	background-color: #663333; /* #cc9933; #ff9900; */
 }
 
 .section-welcome .portletsBelowContentC .portlet dt.portletHeader {
 /*  background: #FFFF66 url('high-field-portlet.jpg') top left no-repeat; */
-  background-color: #0099CC;
+  background-color: #339933;
 }
 
 
@@ -626,13 +627,13 @@ dd.portletItem .navTreeCurrentItem {
 .section-welcome #portlets-below .portlet dt.portletHeader a:active,
 .section-welcome #portlets-below .portlet dt.portletHeader a:visited {
   background-color: transparent;
-  color: black;
+  color: white;
   line-height: 1.2em;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .section-welcome #portlets-below .portlet dt.portletHeader a:hover {
-  color: black;
+  color: #CCCCCC;
   text-decoration: none;
 }
 

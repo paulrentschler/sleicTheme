@@ -149,6 +149,8 @@
 	    	Body text
 	    </metal:field>          		
 
+      <div class="visual-clear"><!-- --></div>
+
       <div tal:replace="structure provider:plone.belowcontentbody" />
 
     </tal:main-macro>

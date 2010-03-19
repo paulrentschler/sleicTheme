@@ -4,6 +4,7 @@
 <object>
 <!-- hide Plone's defaults -->
   <hidden manager="plone.portaltop" skinname="sleicTheme">
+		<viewlet name="plone.personal_bar" />
     <viewlet name="plone.path_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
   </hidden>
@@ -26,8 +27,8 @@
 <!-- insert our own, and make sure everything is in the order we want -->
 	<order manager="plone.portaltop" skinname="sleicTheme">
 		<viewlet name="plone.header" />
-		<viewlet name="plone.personal_bar" />
-    <viewlet name="sleicTheme.facility_banner" insert-after="plone.personal_bar" />
+		<viewlet name="sleicTheme.personal_bar" />
+    <viewlet name="sleicTheme.facility_banner" />
 		<viewlet name="sleicTheme.path_bar" />
 	</order>
 

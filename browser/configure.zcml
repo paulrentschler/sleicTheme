@@ -62,6 +62,15 @@
         permission="zope2.View"
         />
 
+	<!-- The customized personalbar -->
+    <browser:viewlet
+        name="sleicTheme.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.PersonalBarViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
 	<!-- Move site actions  --> 
     <browser:viewlet
         name="sleicTheme.site_actions"

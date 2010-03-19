@@ -197,6 +197,8 @@ img.no-photo {
 
 #portal-personaltools li {
   color: white;
+  display: list-item;
+  float: right;
 }
 
 #portal-personaltools li a {
@@ -205,6 +207,31 @@ img.no-photo {
 
 #portal-personaltools li a:hover {
   text-decoration: underline;
+}
+
+#portal-personaltools .contentActions a {
+	color: #FFFFFF;
+}
+
+#portal-personaltools .actionMenu .actionMenuContent li {
+  display: inline;
+  float: none;
+	text-align: left;
+}
+
+#portal-personaltools .actionMenu .actionMenuContent li a {
+	color: #666666;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+#portal-personaltools .actionMenu .actionMenuContent li a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#portal-personaltools .actionMenu .actionMenuContent .actionSeparator a {
+	border-top: 1px solid #797979;
 }
 
 
@@ -392,6 +419,74 @@ ul.list {
 
 
 
+/* ----- EDITING CONTENT ----- */
+.documentEditable .documentContent {
+	border: 0;
+}
+
+.contentViews {
+	border-color: #797979;
+}
+
+.contentViews li a {
+	border: 1px solid #797979;
+	color: #666666;
+}
+
+.contentViews li a:hover {
+	background-color: #CCCCCC;
+	color: #666666;
+}
+
+.contentViews .selected a {
+	background-color: #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	color: #666666;
+}
+
+.contentActions {
+/*
+  border-bottom: 1px solid #74AE0B;
+	background-color:#CDE2A7;
+	border-left:1px solid #74AE0B;
+	border-right:1px solid #74AE0B;
+	color:#578308;
+*/
+  border-bottom: 1px solid #797979;
+	background-color: #CCCCCC;
+	border-left: 1px solid #797979;
+	border-right: 1px solid #797979;
+	color: #666666;
+}
+
+.contentActions li {
+	border-left: 1px solid #797979;
+}
+
+.contentActions a {
+	color: #666666;
+}
+
+.actionMenu .actionMenuContent ul {
+	background: #CCCCCC none repeat scroll 0 0;
+	border-color: #797979;
+}
+
+.actionMenu .actionMenuContent li a:hover {
+	background-color: #797979;
+}
+
+.actionMenu .actionMenuContent .actionSeparator a {
+	border-top: 1px solid #797979;
+}
+
+.documentContent {
+  padding: 1em 0 !important;
+}
+
+
+
+
 /* ---- TABLES ---- */
 
 table.listing {
@@ -527,6 +622,18 @@ table.gradProgs tbody tr td {
   border: medium none;
   float: left;
   margin: 0.25em 0.5em 0.25em 0;
+}
+
+
+
+
+/* --- MANAGE PORTLET LINKS --- */
+.managePortletsLink,
+.managePortletsFallback,
+.managePortletsAboveLink,
+.managePortletsBelowLink,
+.manageFooterPortletsLink {
+		display: none;
 }
 
 

@@ -10,7 +10,7 @@
 		 tal:attributes="href context/portal_url"
 		 i18n:domain="plone">
 		<img src="sleic-logo.jpg" alt=""
-				 tal:replace="structure context/sleic-logo.jpg" />
+				 tal:replace="structure context/sleic-logo.png" />
 	</a>
 </div>
 

@@ -15,6 +15,11 @@
     <viewlet name="plone.searchbox" />
   </hidden>
   
+  <hidden manager="plone.belowcontenttitle" skinname="sleicTheme">
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
+    <viewlet name="plone.belowcontenttitle.keywords" />
+  </hidden>
+
   <hidden manager="plone.belowcontentbody" skinname="sleicTheme">
     <viewlet name="plone.abovecontenttitle.documentactions" />
   </hidden>
@@ -37,6 +42,10 @@
 		<viewlet name="sleicTheme.searchbox" insert-before="sleicTheme.logo" />
 	</order>
 
+  <order manager="plone.contentviews" skinname="sleicTheme">
+		<viewlet name="sleicTheme.documentbyline" insert-after="plone.contentactions" />
+  </order>
+  
 	<order manager="plone.portalfooter" skinname="sleicTheme">
 		<viewlet name="sleicTheme.footer" insert-before="plone.analytics"/>
 		<viewlet name="sleicTheme.site_actions" insert-before="sleicTheme.footer" />

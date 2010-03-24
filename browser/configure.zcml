@@ -71,6 +71,15 @@
         permission="zope2.View"
         />
 
+	<!-- The customized document byline -->
+    <browser:viewlet
+        name="sleicTheme.document_byline"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        class=".viewlets.DocumentBylineViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
 	<!-- Move site actions  --> 
     <browser:viewlet
         name="sleicTheme.site_actions"

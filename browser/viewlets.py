@@ -1,10 +1,9 @@
 from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ViewletBase
-from plone.app.layout.viewlets import common
+from plone.app.layout.viewlets import common, content
 from Products.CMFCore.utils import getToolByName
 
-class LogoViewlet(ViewletBase):
+class LogoViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/logo.pt')
 
     def update(self):
@@ -13,10 +12,10 @@ class LogoViewlet(ViewletBase):
 
         self.navigation_root_url = portal_state.navigation_root_url()
 
-class FacilityBannerViewlet(ViewletBase):
+class FacilityBannerViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/facility_banner.pt')
 
-class FooterViewlet(ViewletBase):
+class FooterViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/footer.pt')
 
 class SearchBoxViewlet(common.SearchBoxViewlet):
@@ -37,3 +36,13 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         mt = getToolByName(self.context, 'portal_membership')
         self.canManagePortlets = mt.checkPermission('Portlets: Manage portlets', self.context)
         self.canManagePortal = mt.checkPermission('Manage portal', self.context)
+
+class DocumentBylineViewlet(content.DocumentBylineViewlet):
+    render = ViewPageTemplateFile('templates/document_byline.pt')
+    
+    def update(self):
+        content.DocumentBylineViewlet.update(self)
+        
+        mt = getToolByName(self.context, 'portal_membership')
+        self.canManagePortal = mt.checkPermission('Manage portal', self.context)
+        

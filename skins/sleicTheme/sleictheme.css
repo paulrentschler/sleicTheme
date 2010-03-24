@@ -481,6 +481,14 @@ ul.list {
   padding: 1em 0 !important;
 }
 
+.documentByLine {
+	color: #333;
+	margin-left: 1em;
+	margin-top: -1.3em;
+	position: relative;
+	z-index: 5;
+}
+
 
 
 

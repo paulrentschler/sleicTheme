@@ -43,7 +43,10 @@
 	</order>
 
   <order manager="plone.contentviews" skinname="sleicTheme">
-		<viewlet name="sleicTheme.documentbyline" insert-after="plone.contentactions" />
+		<viewlet name="contentwellportlets.portletsabovecontent" />
+		<viewlet name="plone.contentviews" />
+		<viewlet name="plone.contentactions" />
+		<viewlet name="sleicTheme.documentbyline" />
   </order>
   
 	<order manager="plone.portalfooter" skinname="sleicTheme">

@@ -484,9 +484,6 @@ ul.list {
 .documentByLine {
 	color: #333;
 	margin-left: 1em;
-	margin-top: -1.3em;
-	position: relative;
-	z-index: 5;
 }
 
 

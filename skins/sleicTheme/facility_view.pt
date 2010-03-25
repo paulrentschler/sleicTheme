@@ -28,7 +28,7 @@
 			<div tal:replace="structure provider:plone.belowcontenttitle" />
 
 			<span> 
-				<div id="facilitySidebar" tal:define="facilityImageExists exists:context/facilityImage" tal:condition="python:facilityImageExists or here.website or here.contactName or here.contactEmail or here.contactPhone or here.address or here.city or here.campus and here.campus != '--'" >      
+				<div id="facilitySidebar" tal:define="facilityImageExists exists:context/facilityImage" tal:condition="python:facilityImageExists or here.website or here.contactName or here.contactEmail or here.contactPhone or here.address or here.city" >      
 					
 					<tal:ifFacilityImageExists tal:condition="exists:context/facilityImage">
 						<tal:facilityImage tal:define="facilityImageSrc string:${here/facilityImage/absolute_url}_${here/facilityImageSize};
@@ -95,14 +95,10 @@
 					</tal:ifContactInfoExists>
 		
 		
-					<tal:ifAddressInfoExists tal:condition="python:here.address or here.campus != '--' or here.city">
+					<tal:ifAddressInfoExists tal:condition="python:here.address or here.city">
 						<div id="facilityAddress">
 							<h3>Address</h3>
 							<p>
-								<tal:ifCampusExists tal:condition="python:here.campus and here.campus != '--'">
-									<span id="facilityCampusLabel">Campus:</span>
-									<tal:campus tal:replace="context/getCampus">Campus</tal:campus><br />
-								</tal:ifCampusExists> 
 								<tal:ifAddressExists tal:condition="python:here.address">
 									<tal:address tal:replace="structure python:context.getAddress().replace('\n','<br />')">Address</tal:address><br />
 								</tal:ifAddressExists>

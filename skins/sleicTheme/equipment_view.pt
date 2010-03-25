@@ -153,12 +153,6 @@
 								<a href="" tal:attributes="href parentFacility/absolute_url">
 								<span id="equipmentFacilityTitle" tal:content="string:SLEIC ${parentFacility/Title}">Facility name</span></a><br />
 								
-								
-								<tal:ifCampusExists tal:condition="python:parentFacility.campus and parentFacility.campus != '--'">
-									<span id="equipmentCampusLabel">Campus:</span>
-									<tal:campus tal:replace="context/getCampus">Campus</tal:campus><br />		
-								</tal:ifCampusExists> 
-								
 								<tal:ifAddressExists tal:condition="python:parentFacility.address">
 									<tal:address tal:replace="structure python:context.getAddress().replace('\n','<br />')">Address</tal:address><br />						
 								</tal:ifAddressExists>

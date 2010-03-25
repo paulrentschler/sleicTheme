@@ -46,7 +46,7 @@
 		<viewlet name="contentwellportlets.portletsabovecontent" />
 		<viewlet name="plone.contentviews" />
 		<viewlet name="plone.contentactions" />
-		<viewlet name="sleicTheme.documentbyline" />
+		<viewlet name="sleicTheme.documentbyline" insert-after="plone.contentactions" />
   </order>
   
 	<order manager="plone.portalfooter" skinname="sleicTheme">

@@ -101,6 +101,10 @@ img.no-photo {
   margin-top: -60px;
 }
 
+#logos #portal-logo img {
+  margin: 15px 0 1em 2em;
+}
+
 #logos #portal-logo h1 {
   color: white;
   font-size: 50px;

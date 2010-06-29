@@ -18,6 +18,7 @@
   Changes:
   	- reordered the individual pieces of information
   	- change certain details depending on the person's classification
+    - added display of research projects
   Notes:
   	- the emptyBiography condition is necessary because Kupu
   	   automatically populates rich text fields with "<p>&nbsp;</p>"
@@ -104,22 +105,8 @@
 		        </div>
 		      </tal:biography>
           
-	        <div class="courselisting" 
-	             tal:define="courses context/getCourses"
-	             tal:condition="courses">
-	          <h2 i18n:translate="FacultyStaffDirectory_label_courses">Courses</h2>
-	          <dl tal:repeat="course courses">
-	            <dt>
-	              <a tal:attributes="href course/getRemoteUrl"
-	                 tal:content="course/Title" 
-	                 tal:condition="course/getRemoteUrl" />
-	              <span tal:replace="course/Title"
-	                    tal:condition="not: course/getRemoteUrl" />
-	            </dt>
-	            <dd tal:content="structure course/Description" />
-	          </dl>
-	        </div>
-
+          <div class="visualClear"><!-- --></div>
+          
           <div tal:condition="context/getWebsites" class="websites">
             <h2>For more about me, see:</h2>
             <ul class="list websites">
@@ -130,6 +117,38 @@
               </li>
             </ul>              
           </div>
+        </div>
+
+        <div class="researchprojects" 
+             tal:define="projects python:context.getFolderContents({'portal_type': 'ResearchProject'})"
+             tal:condition="projects">
+          <h2 i18n:translate="FacultyStaffDirectory_label_researchprojects">Research Projects:</h2>
+          <dl tal:repeat="project projects">
+            <dt>
+              <a tal:attributes="href project/getURL"
+                 tal:content="project/Title" 
+                 tal:condition="project/getURL" />
+                <span tal:replace="project/Title"
+                      tal:condition="not: project/getURL" />
+            </dt>
+            <dd tal:content="structure project/Description" />
+          </dl>
+        </div>
+
+        <div class="courselisting" 
+             tal:define="courses context/getCourses"
+             tal:condition="courses">
+          <h2 i18n:translate="FacultyStaffDirectory_label_courses">Courses</h2>
+          <dl tal:repeat="course courses">
+            <dt>
+              <a tal:attributes="href course/getRemoteUrl"
+                 tal:content="course/Title" 
+                 tal:condition="course/getRemoteUrl" />
+              <span tal:replace="course/Title"
+                    tal:condition="not: course/getRemoteUrl" />
+            </dt>
+            <dd tal:content="structure course/Description" />
+          </dl>
         </div>
 
         <div class="departments" tal:define="departmentsList context/getDepartments" tal:condition="departmentsList">

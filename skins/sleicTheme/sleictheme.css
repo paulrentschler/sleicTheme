@@ -845,8 +845,11 @@ table.eventTable td .eventCanceled {
 .facultyStaffDirectory.personView .headshot {
   background-color: white;
   border-left: 2em solid white;
-  border-right: 2em solid white;
-  margin: 5em 0 0 0;
+  border-right: 0.5em solid white;
+  margin: 2em 0 0 0;
+  padding: 0;
+  text-align: right;
+  width: auto;
 }
 
 .facultyStaffDirectory .standardView ul.jobTitle li {

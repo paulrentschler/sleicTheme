@@ -70,7 +70,7 @@
                       <tr>
                         <th colspan="4" class="classification">
                           <h2 tal:condition="python: classification.id == 'faculty'">
-                            Huck Institutes administrative personnel</h2>
+                            Administrative personnel</h2>
 
                           <h2 tal:condition="python: classification.id != 'faculty'"
                               tal:content="classificationName">[classification name]</h2>
